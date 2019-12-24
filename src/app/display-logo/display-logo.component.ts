@@ -7,13 +7,16 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./display-logo.component.css"]
 })
 export class DisplayLogoComponent implements OnInit {
-  title;
+  title: string = "Schalke 04";
+  crest: string = "../../assets/schalke.svg";
   constructor(private drawAClubService: DrawAClubService) {}
 
   drawAClub() {
-    this.drawAClubService
-      .drawAClub()
-      .subscribe(data => (this.title = data.title));
+    this.drawAClubService.drawAClub().subscribe(data => {
+      console.log(data);
+      this.title = data.name;
+      this.crest = data.crestUrl;
+    });
   }
 
   ngOnInit() {}

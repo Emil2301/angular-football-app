@@ -1,3 +1,6 @@
-<button (click)="drawAClub()">Get Products</button>
+<button (click)="drawAClub()">Draw teams</button>
 
 <div *ngIf="title">{{ title }}</div>
+<div *ngIf="crest">
+  <img src="{{ crest }}" alt="Football Club" height="100" width="auto" />
+</div>
