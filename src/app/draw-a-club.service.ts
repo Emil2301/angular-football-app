@@ -1,3 +1,4 @@
+import { Placeholder } from "./Placeholder";
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
@@ -9,6 +10,8 @@ export class DrawAClubService {
   constructor(private http: HttpClient) {}
 
   drawAClub() {
-    return this.http.get("https://jsonplaceholder.typicode.com/todos/1");
+    return this.http.get<Placeholder>(
+      "https://jsonplaceholder.typicode.com/todos/1"
+    );
   }
 }

@@ -1,5 +1,3 @@
-import { Observable } from "rxjs";
-import { Placeholder } from "./../Placeholder";
 import { DrawAClubService } from "./../draw-a-club.service";
 import { Component, OnInit } from "@angular/core";
 
@@ -12,12 +10,13 @@ export class DisplayLogoComponent implements OnInit {
   title;
   constructor(private drawAClubService: DrawAClubService) {}
 
-  drawAClub(): Observable<Placeholder> {
-    this.drawAClubService.drawAClub().subscribe(data => {
-      this.title = data.title;
-      return this.title;
-    });
+  drawAClub() {
+    this.drawAClubService
+      .drawAClub()
+      .subscribe(data => (this.title = data.title));
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    // this.title = this.drawAClubService.drawAClub();
+  }
 }

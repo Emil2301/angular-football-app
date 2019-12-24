@@ -1,6 +1,6 @@
 export interface Placeholder {
-  userId: number;
   id: number;
+  usedId: number;
   title: string;
   completed: boolean;
 }
