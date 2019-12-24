@@ -16,7 +16,5 @@ export class DisplayLogoComponent implements OnInit {
       .subscribe(data => (this.title = data.title));
   }
 
-  ngOnInit() {
-    // this.title = this.drawAClubService.drawAClub();
-  }
+  ngOnInit() {}
 }
