@@ -1,0 +1,24 @@
+.button-container {
+  margin-top: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container {
+  margin-top: 5vh;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+div.title {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+button {
+  font-size: 1.5em;
+}

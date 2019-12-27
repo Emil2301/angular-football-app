@@ -7,8 +7,8 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./display-logo.component.css"]
 })
 export class DisplayLogoComponent implements OnInit {
-  title: string = "Schalke 04";
-  crest: string = "../../assets/schalke.png";
+  title: string;
+  crest: string;
   constructor(private drawAClubService: DrawAClubService) {}
 
   drawAClub() {
