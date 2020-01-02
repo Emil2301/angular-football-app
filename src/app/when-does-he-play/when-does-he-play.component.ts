@@ -1,11 +1,6 @@
 import { WhenDoesHePlayService } from "./../when-does-he-play.service";
 import { Component, OnInit } from "@angular/core";
 
-export interface Food {
-  value: string;
-  viewValue: string;
-}
-
 @Component({
   selector: "app-when-does-he-play",
   templateUrl: "./when-does-he-play.component.html",
@@ -14,9 +9,8 @@ export interface Food {
 export class WhenDoesHePlayComponent implements OnInit {
   selectedPlayer: string;
   nextMatchDate: Date;
-  nextMatchHomeTeam: Date;
-  nextMatchAwayTeam: Date;
-
+  nextMatchHomeTeam: string;
+  nextMatchAwayTeam: string;
 
   constructor(private whenDoesHePlayService: WhenDoesHePlayService) { }
 
@@ -38,10 +32,6 @@ export class WhenDoesHePlayComponent implements OnInit {
       this.nextMatchDate = data.matches[0].utcDate;
       this.nextMatchHomeTeam = data.matches[0].homeTeam.name;
       this.nextMatchAwayTeam = data.matches[0].awayTeam.name;
-
-      console.log(this.nextMatchDate)
-      console.log(this.nextMatchHomeTeam)
-      console.log(this.nextMatchAwayTeam)
     });
   }
 }

@@ -10,9 +10,10 @@ import { DisplayLogoComponent } from "./display-logo/display-logo.component";
 import { WhenDoesHePlayComponent } from "./when-does-he-play/when-does-he-play.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FormsModule } from '@angular/forms';
+import { NextMatchDetailsComponent } from './next-match-details/next-match-details.component';
 
 @NgModule({
-  declarations: [AppComponent, DisplayLogoComponent, WhenDoesHePlayComponent],
+  declarations: [AppComponent, DisplayLogoComponent, WhenDoesHePlayComponent, NextMatchDetailsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

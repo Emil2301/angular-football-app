@@ -6,6 +6,5 @@
     </mat-select>
   </mat-form-field>
 </div>
-<div *ngIf="nextMatchHomeTeam">
-  {{ nextMatchHomeTeam }} - {{nextMatchAwayTeam}}
-</div>
+<app-next-match-details [nextMatchDate]="nextMatchDate" [nextMatchHomeTeam]="nextMatchHomeTeam"
+  [nextMatchAwayTeam]="nextMatchAwayTeam"></app-next-match-details>

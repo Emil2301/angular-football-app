@@ -1,0 +1,11 @@
+<div *ngIf="nextMatchDate" class="container">
+  <div>
+    Next Match:
+  </div>
+  <div *ngIf="nextMatchDate">
+    {{nextMatchDate | date:'d MMMM yyyy, H:mm'}}
+  </div>
+  <div *ngIf="nextMatchHomeTeam">
+    {{ nextMatchHomeTeam }} - {{nextMatchAwayTeam}}
+  </div>
+</div>
