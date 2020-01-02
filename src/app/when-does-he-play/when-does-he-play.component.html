@@ -1,15 +1,11 @@
 <div class="form">
   <mat-form-field>
     <mat-label>Choose the player</mat-label>
-    <mat-select>
-      <mat-option value="5">Robert Lewandowski</mat-option>
-      <mat-option value="340">Jan Bednarek</mat-option>
-      <mat-option value="98">Krzysztof Piątek</mat-option>
-      <mat-option value="113">Arkadiusz Milik</mat-option>
-      <mat-option value="584">Karol Linetty</mat-option>
-      <mat-option value="4">Łukasz Piszczek</mat-option>
-      <mat-option value="341">Mateusz Klich</mat-option>
-      <mat-option value="322">Kamil Grosicki</mat-option>
+    <mat-select [ngModel]="selectedPlayer" (ngModelChange)="whenDoesHePlay($event)">
+      <mat-option *ngFor="let player of players" [value]="player">{{player.name}}</mat-option>
     </mat-select>
   </mat-form-field>
+</div>
+<div *ngIf="nextMatchHomeTeam">
+  {{ nextMatchHomeTeam }} - {{nextMatchAwayTeam}}
 </div>

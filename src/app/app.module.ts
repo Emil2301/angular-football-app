@@ -9,6 +9,7 @@ import { AppComponent } from "./app.component";
 import { DisplayLogoComponent } from "./display-logo/display-logo.component";
 import { WhenDoesHePlayComponent } from "./when-does-he-play/when-does-he-play.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, DisplayLogoComponent, WhenDoesHePlayComponent],
@@ -17,9 +18,10 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
