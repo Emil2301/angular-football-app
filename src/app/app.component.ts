@@ -7,7 +7,7 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   title = "Angular Football App";
-  selectedRoute = "display-logo";
+  selectedRoute;
   onRouteSelect(route) {
     this.selectedRoute = route;
   }

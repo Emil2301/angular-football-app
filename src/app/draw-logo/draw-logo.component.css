@@ -1,0 +1,21 @@
+.button-container {
+  margin-top: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+button {
+  font-size: 1.5em;
+}
+@media (max-width: 720px) and (orientation: portrait){
+  button {
+    font-size: 5vw;
+  }
+}
+
+@media (max-width: 720px) and (orientation: landscape){
+  button {
+    font-size: 3vw;
+  }
+}

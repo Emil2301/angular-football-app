@@ -1,0 +1,4 @@
+<div class="button-container">
+  <button class="drawTeam" (click)="drawAClub()">Draw your team</button>
+</div>
+<app-club-name-and-logo *ngIf="title" [title]="title" [crest]="crest"></app-club-name-and-logo>

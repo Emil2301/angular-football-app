@@ -13,6 +13,7 @@
   text-transform: uppercase;
   font-family: Georgia, "Times New Roman", Times, serif;
   margin-top: 10vh;
+  text-align: center;
 }
 
 nav {
@@ -23,10 +24,30 @@ nav a {
   color: black;
   text-decoration: none;
 }
-.active {
+.active button {
   color: green;
 }
 
 button {
   font-size: 1.5em;
+}
+
+@media (max-width: 720px) and (orientation: portrait){
+  .title {
+    font-size: 10vw; 
+    margin: 5vh 5vw 0 5vw;
+  }    
+  button {
+    font-size: 5vw;
+  }
+}
+
+@media (max-width: 720px) and (orientation: landscape){
+  .title {
+    font-size: 5vw; 
+    margin: 5vh 5vw 0 5vw;
+  }    
+  button {
+    font-size: 3vw;
+  }
 }

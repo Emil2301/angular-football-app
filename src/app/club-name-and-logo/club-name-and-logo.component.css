@@ -1,0 +1,37 @@
+  .container {
+    margin-top: 3vh;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  div.title {
+    font-size: 6vh;
+    font-weight: bold;
+  }
+
+  .crest {
+      margin-top: 10px;
+  }
+  
+  .crest img {
+      height: 30vh;
+      width: auto;
+  }
+  @media (max-width: 720px) and (orientation: portrait){
+    div.title {
+        font-size: 9vw;
+        margin: 0 5vw;
+        text-align: center;
+      }
+  }
+  
+  @media (max-width: 720px) and (orientation: landscape){
+    div.title {
+        font-size: 5vw;
+        text-align: center;
+      }
+  }
+  

@@ -1,22 +1,12 @@
 <div class="app-container">
   <div class="title">{{ title }}</div>
   <nav>
-    <a routerLink="/display-logo"
-      ><button
-        [class.active]="selectedRoute === 'display-logo'"
-        (click)="onRouteSelect('display-logo')"
-      >
+    <a routerLink="/draw-logo" routerLinkActive="active"><button (click)="onRouteSelect('draw-logo')">
         Draw Logo
-      </button></a
-    >
-    <a routerLink="/when-does-he-play"
-      ><button
-        [class.active]="selectedRoute === 'when-does-he-play'"
-        (click)="onRouteSelect('when-does-he-play')"
-      >
+      </button></a>
+    <a routerLink="/when-does-he-play" routerLinkActive="active"><button (click)="onRouteSelect('when-does-he-play')">
         When Does He Play
-      </button></a
-    >
+      </button></a>
   </nav>
   <router-outlet></router-outlet>
 </div>
